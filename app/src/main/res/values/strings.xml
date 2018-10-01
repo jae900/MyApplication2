@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="hello">안녕하십니까!</string>
+    <string name="myname">박재식입니다!</string>
+    <string name="change">값을 바꿈!</string>
+</resources>
