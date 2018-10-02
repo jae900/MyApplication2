@@ -1,5 +1,6 @@
 package com.example.user.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,8 @@ public class TwoButtons extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(TwoButtons.this, "계산기", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(TwoButtons.this, CalcActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -31,6 +34,8 @@ public class TwoButtons extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(TwoButtons.this,"플레이어",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(TwoButtons.this, PlayerActivity.class);
+                startActivity(intent);
             }
         });
 
