@@ -9,18 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ButtonAlign2Activity">
-        </activity>
+        <activity android:name=".ButtonAlign2Activity" />
         <activity android:name=".ButtonAlignActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".PrintStarActivity"></activity>
-        <activity android:name=".twoButtons">
+        <activity android:name=".PrintStarActivity" />
+        <activity android:name=".TwoButtons">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CalcActivity" />
+        <activity android:name=".PlayerActivity"></activity>
     </application>
 
 </manifest>

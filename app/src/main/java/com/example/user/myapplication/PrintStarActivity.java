@@ -18,7 +18,7 @@ public class PrintStarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_print_star);
         getSupportActionBar().setTitle("별찍기");
         et = findViewById(R.id.printEditText);
-        Button bt =  findViewById(R.id.printButton);
+        bt =  findViewById(R.id.printButton);
         tv =  findViewById(R.id.printView);
 
         bt.setOnClickListener(new View.OnClickListener() {

@@ -3,11 +3,11 @@ package com.example.user.myapplication;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class twoButtons extends AppCompatActivity {
+public class PlayerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_two_buttons);
+        setContentView(R.layout.activity_player);
     }
 }
