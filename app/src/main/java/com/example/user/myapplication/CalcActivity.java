@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class CalcActivity extends AppCompatActivity {
     private Button equals, clear;
-    private EditText firstValue, secondValue;
+    private TextView firstValue, secondValue;
     private TextView operator, result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +22,9 @@ public class CalcActivity extends AppCompatActivity {
     public void init(){
         getSupportActionBar().setTitle("계산기");
         firstValue = findViewById(R.id.firstValue);
-        firstValue.setShowSoftInputOnFocus(false);
+        /**firstValue.setShowSoftInputOnFocus(false);**/
         secondValue=findViewById(R.id.secondValue);
-        secondValue.setShowSoftInputOnFocus(false);
+        /**secondValue.setShowSoftInputOnFocus(false);**/
         operator = findViewById(R.id.operator);
         result = findViewById(R.id.result);
 
