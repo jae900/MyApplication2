@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#b2fae2">
+        android:background="#ff01f0">
         <TextView
             android:id="@+id/firstValue"
             android:layout_width="0dp"
@@ -56,7 +56,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal"
-        android:background="#b2fae2">
+        android:background="#ffe3fc">
 
         <LinearLayout
             android:layout_width="0dp"

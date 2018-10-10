@@ -20,7 +20,7 @@ public class CalcActivity extends AppCompatActivity {
     }
 
     public void init(){
-        getSupportActionBar().setTitle("계산기");
+        setTitle(R.string.calcTitle);
         firstValue = findViewById(R.id.firstValue);
         /**firstValue.setShowSoftInputOnFocus(false);**/
         secondValue=findViewById(R.id.secondValue);
@@ -48,24 +48,23 @@ public class CalcActivity extends AppCompatActivity {
                     int first = Integer.parseInt(firstValue.getText().toString());
                     int second = Integer.parseInt(secondValue.getText().toString());
                     String opr = operator.getText().toString();
-                    int calc = 0;
+                    String calc = "";
 
                     switch(opr){
                         case "+" :
-                            calc = first+second;
+                            calc = (first+second)+"";
                             break;
                         case "-" :
-                            calc = first-second;
+                            calc = (first-second)+"";
                             break;
                         case "*":
-                            calc = first*second;
+                            calc = (first*second)+"";
                             break;
                         case "/":
-                            calc = first/second;
+                            calc = ((double)first/second)+"";
                     }
 
-                    String calcedNum = calc+"";
-                    result.setText(calcedNum);
+                    result.setText(calc);
                 }catch(Exception e){
                     result.setText("망함");
                 }
@@ -74,12 +73,33 @@ public class CalcActivity extends AppCompatActivity {
         });
     }
     public void clkBtn(View v){
-        Button btn = (Button) v;
+        TextView target = null;
+
         if(operator.getText()==""){
-            firstValue.setText(firstValue.getText().toString()+btn.getText());
+            target = firstValue;
         } else{
-            secondValue.setText(secondValue.getText().toString()+btn.getText());
+            target = secondValue;
         }
+
+        if(target != null) {
+            if (v instanceof Button) {
+                Button btn = (Button) v;
+                String insertNo = btn.getText().toString();
+                String presentValue = target.getText().toString();
+                if (presentValue == "" && insertNo.equals("0")) {
+                    presentValue = "";
+                } else {
+                    presentValue += insertNo;
+                }
+                target.setText(presentValue);
+            }
+        }
+
+//        if(operator.getText()==""){
+//            firstValue.setText(firstValue.getText().toString()+btn.getText());
+//        } else{
+//            secondValue.setText(secondValue.getText().toString()+btn.getText());
+//        }
     }
 
     public void changeOperator(View v){
@@ -88,6 +108,5 @@ public class CalcActivity extends AppCompatActivity {
             String op = btn.getText().toString();
             operator.setText(op);
         }
-
     }
 }

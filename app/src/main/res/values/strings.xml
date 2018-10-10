@@ -1,6 +1,12 @@
 <resources>
+    <string name="calcTitle">계산기다</string>
     <string name="app_name">My Application</string>
     <string name="hello">안녕하십니까!</string>
     <string name="myname">박재식입니다!</string>
     <string name="change">값을 바꿈!</string>
+    <string name="duruduru">마미손 - 소년점프</string>
+    <string name="powerup">레드벨벳 - Power Up</string>
+    <string name="pause">일시정지</string>
+    <string name="stop">정지</string>
+    <string name="play">재생</string>
 </resources>

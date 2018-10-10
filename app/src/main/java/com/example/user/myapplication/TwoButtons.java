@@ -3,6 +3,7 @@ package com.example.user.myapplication;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ public class TwoButtons extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("test", "이벤트 연결 성공");
                 Toast.makeText(TwoButtons.this, "계산기", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(TwoButtons.this, CalcActivity.class);
                 startActivity(intent);
